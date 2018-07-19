@@ -1,0 +1,123 @@
+<html>
+  <head>
+    <script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
+    
+    <script src="dancemachine.js"></script>
+  </head>
+
+  <body>
+
+    <a-scene>
+      
+      <audio src="dancingqueencropped.mp3" autoplay
+      preload></audio>
+      
+       
+        <a-sphere src=" images/karlieklossface.JPG" color="black" position = "6 0 -12" radius = "3">  
+      <a-animation
+          attribute="rotation"
+          dur="10000"
+          fill="both"
+          from="0 0 0"
+          to="0 360 0"
+          easing="linear"
+          repeat="indefinite">
+        </a-animation>
+        
+      <a-text value="LET'S PLAY!" position="-14 7 -12" color="black" font-size="25" height="30" width="30" font="exo2semibold"></a-text>
+     
+    
+      <a-box id="boxtop" onclick="function1()" color="#00D4FF" position="0 6 -12" height="4" width="4" depth="4">
+        <a-animation attribute="scale"
+        dur="1000"
+        from="1 1 1"
+        to="1.25 1.25 1.25 "
+        direction='alternate-reverse'
+        easing="ease-in-out-circ"
+        repeat="indefinite"></a-animation>
+      </a-box>
+      <a-box id="boxbtm" onclick="function2()" color="#00D4FF" position="0 -6 -12" height="4" width="4" depth="4">
+        <a-animation attribute="scale"
+        dur="1000"
+        from="1 1 1"
+        to="1.25 1.25 1.25 "
+        direction='alternate-reverse'
+        easing="ease-in-out-circ"
+        repeat="indefinite"></a-animation>
+      </a-box>
+      <a-box id="boxlft" onclick="function3()" color="#00D4FF" position="-6 0 -12" height="4" width="4" depth="4">
+        <a-animation attribute="scale"
+        dur="1000"
+        from="1 1 1"
+        to="1.25 1.25 1.25 "
+        direction='alternate-reverse'
+        easing="ease-in-out-circ"
+        repeat="indefinite"></a-animation>
+      </a-box>
+      <a-box id="boxrt" onclick="function4()" color="#00D4FF" position="6 0 -12" height="4" width="4" depth="4">
+        <a-animation attribute="scale"
+        dur="1000"
+        from="1 1 1"
+        to="1.25 1.25 1.25 "
+        direction='alternate-reverse'
+        easing="ease-in-out-circ"
+        repeat="indefinite"></a-animation>
+      </a-box>
+<!--code for arrows       -->
+      <a-box id="arrowtop" color="blue" position="0 4.5 -8" height="1" width="1" depth=".1">
+        <a-animation attribute="scale"
+        dur="1000"
+        from="1 1 1"
+        to="1.2 1.2 1.2"
+        direction='alternate-reverse'
+        easing="ease-in-out-circ"
+        repeat="indefinite"></a-animation>
+      </a-box>
+      <a-cylinder  segments-radial="3" position="0 5.2 -8" rotation="-90 0 0" scale="1 0.1 1" color="blue"></a-cylinder>
+      <a-box id="arrowbtm" color="blue" position="0 -4.5 -8" height="1" width="1" depth=".1">
+        <a-animation attribute="scale"
+        dur="1000"
+        from="1 1 1"
+        to="1.2 1.2 1.2"
+        direction='alternate-reverse'
+        easing="ease-in-out-circ"
+        repeat="indefinite"></a-animation>
+      </a-box>
+      <a-cylinder  segments-radial="3" position="0 -5.2 -8" rotation="-270 0 0" scale="1 0.1 1" color="blue"></a-cylinder>
+      <a-box id="arrowlft" color="blue" position="-4.5 0 -8" height="1" width="1" depth=".1">
+        <a-animation attribute="scale"
+        dur="1000"
+        from="1 1 1"
+        to="1.2 1.2 1.2"
+        direction='alternate-reverse'
+        easing="ease-in-out-circ"
+        repeat="indefinite"></a-animation>
+      </a-box>
+      <a-cylinder  segments-radial="3" position="-5.2 0 -8" rotation="55 82 70" scale="1 0.1 1" color="blue"></a-cylinder>
+      <a-box id="arrowrt" color="blue" position="4.5 0 -8" height="1" width="1" depth=".1">
+        <a-animation attribute="scale"
+        dur="1000"
+        from="1 1 1"
+        to="1.2 1.2 1.2"
+        direction='alternate-reverse'
+        easing="ease-in-out-circ"
+        repeat="indefinite"></a-animation>
+      </a-box>
+      <a-cylinder  segments-radial="3" position="5.2 0 -8" rotation="118 60 60" scale="1 0.1 1" color="blue">
+      </a-cylinder>
+
+      
+      <a-plane position="0 0 -3.5" rotation="-90 0 0" width="4" height="2" color="#7BC8A4"></a-plane>
+      <a-camera><a-cursor></a-cursor></a-camera>
+      
+      
+      <a-sky src="http://www.dancenut.com/boston/images/page_graphics/9_dance_cats/club_dance.jpg" ></a-sky>
+      <!--<a-sphere id = "circle1" onclick = "functionName()" color = "blue" position = "0 0 -12"></a-sphere>-->
+      
+      <!--<a-sky src="https://www.tripsavvy.com/thmb/gauQCVHTK9uk1QZYdM4k2UeRBO8=/640x427/filters:fill(auto,1)/club-56a3e8683df78cf7727fcf6d.jpg" ></a-sky>-->
+      
+    </a-scene>
+
+  </body>
+
+</html>
