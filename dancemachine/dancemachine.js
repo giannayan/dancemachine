@@ -1,3 +1,4 @@
+
 // a reference to the enclosing scene element.
 // We will append newly made spheres directly to this.
 const SCENE = document.querySelector('a-scene')
@@ -51,16 +52,65 @@ function function1(){
 }
 function function2(){
     document.getElementById("boxbtm").setAttribute("color", '#FF00B2');
-    console.log("Top Box was clicked!")
+    console.log("Bottom Box was clicked!")
     
 }
 function function3(){
     document.getElementById("boxlft").setAttribute("color", '#FF00B2');
-    console.log("Top Box was clicked!")
+    console.log("Left Box was clicked!")
     
 }
 function function4(){
     document.getElementById("boxrt").setAttribute("color", '#FF00B2');
-    console.log("Top Box was clicked!")
+    console.log("Right Box was clicked!")
     
 }
+// function play(){
+//   document.getElementById("startBtn").setAttribute()
+// }
+  function play(){
+        console.log("I was clicked")
+       var audio = document.getElementById("song");
+       //audio.setAttribute(sound, "volume", 10);
+       audio.setAttribute("sound","volume", "10")
+  }
+       
+function pause(){
+  console.log("pausedddd")
+var sound="src: url(dancingqueencropped.mp3)"
+var entity = document.querySelector('[sound]');
+entity.components.sound.pauseSound();
+      }   
+      
+function pauseSong(){
+  //melany's function: this pauses the sound
+  //link to documentation: https://aframe.io/docs/0.8.0/components/sound.html#methods_pausesound
+  console.log("Melany Pauseddd")
+  var entity = document.querySelector('[sound]');
+  entity.components.sound.stopSound();
+}
+
+function init(){
+   var sceneEl = document.querySelector('a-scene'); 
+        var scoreBoard = document.querySelector('#score');
+
+        sceneEl.querySelector('scorebox').addEventListener('click', () => {
+          this.data.score++;
+          var newScore = 'Score: ' + this.data.score
+          scoreBoard.setAttribute('text', 'value',  newScore)
+        })
+  
+}
+
+function updateScore(){
+  console.log( document.querySelector('#score').getAttribute('points'))
+  document.querySelector('#score').setAttribute('text', 'value', 'Score: ' + document.querySelector('#score').getAttribute('points'));
+  document.querySelector('#score').setAttribute('points', parseInt(document.querySelector('#score').getAttribute('points')) + 1);
+}
+
+function playKarlie() {
+      console.log("hi- i am playing karlie winngingggg")
+      var entity = document.getElementById('karlie')
+      entity.components.sound.playSound()
+      //document.getElementById('karlie').setAttribute("autoplay", "true")
+    }

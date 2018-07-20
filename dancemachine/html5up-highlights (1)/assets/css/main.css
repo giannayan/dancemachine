@@ -1833,6 +1833,12 @@ body {
 		}
 	}
 
+	<img border="pixels">
+	
+	.border { border-width: 25px; border-color: red; border-style: solid; } 
+
+Read more: https://html.com/attributes/img-border/#ixzz5LmcnO5PW
+
 	html body {
 		text-decoration: none;
 	}
